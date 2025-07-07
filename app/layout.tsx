@@ -12,7 +12,7 @@ import { Analytics } from "@vercel/analytics/react";
 import { siteConfig } from "@/site.config";
 
 import Balancer from "react-wrap-balancer";
-import Logo from "@/public/logo.svg";
+import Logo from "@/public/logo.png";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -77,25 +77,21 @@ const Nav = ({ className, children, id }: NavProps) => {
             alt="Logo"
             loading="eager"
             className="dark:invert"
-            width={42}
-            height={26.44}
+            width={60}
+          // height={26.44}
           ></Image>
           <h2 className="text-sm">{siteConfig.site_name}</h2>
         </Link>
         {children}
-        <div className="flex items-center gap-2">
-          <div className="mx-2 hidden md:flex">
-            {Object.entries(mainMenu).map(([key, href]) => (
-              <Button key={href} asChild variant="ghost" size="sm">
-                <Link href={href}>
-                  {key.charAt(0).toUpperCase() + key.slice(1)}
-                </Link>
-              </Button>
-            ))}
-          </div>
-          <Button asChild className="hidden sm:flex">
-            <Link href="https://github.com/9d8dev/next-wp">Get Started</Link>
+        <div className="mx-2 hidden md:flex gap-2">
+          <Button asChild variant="ghost" size="sm">
+            <Link href="/posts">Blog</Link>
           </Button>
+          <Button asChild variant="ghost" size="sm">
+            <Link href="https://cantinbartel.dev">Portfolio</Link>
+          </Button>
+        </div>
+        <div className="flex md:hidden">
           <MobileNav />
         </div>
       </div>
@@ -151,8 +147,8 @@ const Footer = () => {
         <Container className="border-t not-prose flex flex-col md:flex-row md:gap-2 gap-6 justify-between md:items-center">
           <ThemeToggle />
           <p className="text-muted-foreground">
-            &copy; <a href="https://9d8.dev">9d8</a>. All rights reserved.
-            2025-present.
+            &copy; {new Date().getFullYear()} Cantin Bartel. All rights reserved.
+
           </p>
         </Container>
       </Section>

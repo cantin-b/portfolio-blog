@@ -1,10 +1,10 @@
 import type { NextConfig } from "next";
 
 const remoteConfig = {
-    port: "",
-    hostname: `${process.env.WORDPRESS_HOSTNAME}`,
-    pathname: "/**",
-}
+  port: process.env.WORDPRESS_PORT || "",
+  hostname: process.env.WORDPRESS_HOSTNAME || "",
+  pathname: "/wp-content/uploads/**",
+};
 
 const nextConfig: NextConfig = {
   images: {
