@@ -25,8 +25,8 @@ import { SearchInput } from "@/components/posts/search-input";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Blog Posts",
-  description: "Browse all our blog posts",
+  title: "Cantin Bartel | Portfolio Blog",
+  description: "Welcome to my portfolio blog, where I share my projects, insights, and experiences in web development.",
 };
 
 export const dynamic = "auto";

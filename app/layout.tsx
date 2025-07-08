@@ -24,13 +24,13 @@ const font = FontSans({
 });
 
 export const metadata: Metadata = {
-  title: "WordPress & Next.js Starter by 9d8",
+  title: "Cantin Bartel | Portfolio Blog",
   description:
-    "A starter template for Next.js with WordPress as a headless CMS.",
+    "Welcome to my portfolio blog, where I share my projects, insights, and experiences in web development.",
   metadataBase: new URL(siteConfig.site_domain),
   alternates: {
     canonical: "/",
-  },
+  }
 };
 
 export default function RootLayout({
@@ -80,7 +80,7 @@ const Nav = ({ className, children, id }: NavProps) => {
             width={60}
           // height={26.44}
           ></Image>
-          <h2 className="text-sm">{siteConfig.site_name}</h2>
+          {/* <h2 className="text-sm">{siteConfig.site_name}</h2> */}
         </Link>
         {children}
         <div className="mx-2 hidden md:flex gap-2">

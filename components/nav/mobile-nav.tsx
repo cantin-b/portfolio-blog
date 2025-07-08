@@ -47,7 +47,7 @@ export function MobileNav() {
               onOpenChange={setOpen}
             >
               <ArrowRightSquare className="mr-2 h-4 w-4" />
-              <span>{siteConfig.site_name}</span>
+              {/* <span>{siteConfig.site_name}</span> */}
             </MobileLink>
           </SheetTitle>
         </SheetHeader>
