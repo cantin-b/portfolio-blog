@@ -1,12 +1,17 @@
 {
-  "name": "craft-starter",
+  "name": "portfolio-blog",
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbo",
+    "dev": "next dev -H 0.0.0.0",
     "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "start": "next start --port $PORT",
+    "lint": "next lint",
+    "pm2:start": "pm2 start npm --name 'portfolio-blog' -- start",
+    "pm2:startup": "pm2 startup && pm2 save",
+    "pm2:restart": "pm2 restart portfolio-blog",
+    "pm2:stop": "pm2 stop portfolio-blog",
+    "pm2:delete": "pm2 delete portfolio-blog"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",
