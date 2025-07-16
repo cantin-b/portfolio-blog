@@ -35,12 +35,17 @@ export async function PostCard({ post }: { post: Post }) {
       <div className="flex flex-col gap-4">
         <div className="h-48 w-full overflow-hidden relative rounded-md border flex items-center justify-center bg-muted">
           {media?.source_url ? (
-            <Image
-              className="h-full w-full object-cover"
+            // <Image
+            //   className="h-full w-full object-cover"
+            //   src={media.source_url}
+            //   alt={post.title?.rendered || "Post thumbnail"}
+            //   width={400}
+            //   height={200}
+            // />
+            <img
               src={media.source_url}
-              alt={post.title?.rendered || "Post thumbnail"}
-              width={400}
-              height={200}
+              alt="image"
+              className="h-full w-full object-cover"
             />
           ) : (
             <div className="flex items-center justify-center w-full h-full text-muted-foreground">
